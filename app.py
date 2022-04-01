@@ -1,5 +1,5 @@
 from json.tool import main
-from flask import Flask 
+from flask import Flask, url_for, render_template
 import json
 
 
@@ -9,7 +9,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return app.send_static_file("index.html")
+    return render_template("index.html")
+
+@app.route("/wordl")
+def wordl():
+    return render_template("wordl.html")
+    
     
     
 if __name__ == '__main__':

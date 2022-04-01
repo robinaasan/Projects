@@ -10,15 +10,28 @@
     <title>WORDL</title>
 </head>
 <body>
-    
-    <div id="sidebar">
-        asd
-    </div> 
-
-    <div id="menu">
-        <div class="menu-btn">
+    <header id="header">
+        <div id="menu">
+            <div class="menu-btn">
+            </div>
         </div>
+        <h2>Wordl</h2>
+        <div class="stuff"></div>
+    </header>
+
+    <aside id="sidebar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('wordl') }}">Wordl</a>
+    </aside> 
+
+    <div id="container">
+        {% block content %} 
+        {% endblock %}
     </div>
+
+    
+
+
     
     
 
