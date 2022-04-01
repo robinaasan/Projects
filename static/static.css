@@ -1,0 +1,72 @@
+*   {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17;
+}
+
+
+#menu  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    transition: margin-left .5s;
+}
+
+
+
+.menu-btn  {
+    width: 30px;
+    height: 5px;
+    background: lightgrey;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn::before,   
+.menu-btn::after    {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background: lightgrey;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn::before   {
+    transform: translateY(-10px);
+}
+
+.menu-btn::after   {
+    transform: translateY(10px);
+}
+
+/*Animation*/
+
+#menu.open .menu-btn    {
+    transform: translateX(-30px);
+    background: transparent;
+}
+
+#menu.open .menu-btn::before    {
+    transform: rotate(45deg) translate(21px, -21px);
+}
+
+#menu.open .menu-btn::after   {
+    transform: rotate(-45deg) translate(21px, 21px);
+}
+
+
+#sidebar   {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 0;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
