@@ -96,4 +96,27 @@ header  {
 #sidebar a:hover {
     background-color: #53D8FB;
     color: white;
-  }
+}
+
+#container   {
+   display: flex;
+   justify-content: center;
+   margin-top: 10%;
+}
+
+
+.rows   {
+    font-size: 1.7em;
+    
+}
+
+.box    {
+    
+    padding: 10px;
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: larger;
+    text-align: center;
+    height: 50px;
+}

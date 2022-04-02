@@ -2,9 +2,28 @@
 
 {% block content %}
 
-<div id="wordl">
-    
+<div id="app">
+    <div class="rows" v-for='row in 5' :key='index'>
+        <wordl-rad>
+           
+
+        </wordl-rad>
+    </div>
+
 </div>
+
+<script>
+    let app = Vue.createApp({
+        data: function(){
+            return  {
+
+            }
+        }
+    });
+    app.component("wordl-rad", wordlRad);
+    app.mount("#app");
+
+</script>
 
 
 {% endblock %}
